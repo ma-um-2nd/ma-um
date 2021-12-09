@@ -1,11 +1,6 @@
 FROM openjdk:8-jdk-alpine
-CMD ["./gradlew", "clean", "build"]
 
 ARG JAR_FILE=./build/libs/*.jar
-
-RUN ls
-RUN pwd
-RUN echo ${JAR_FILE}
 
 COPY ${JAR_FILE} auth-server.jar
 
