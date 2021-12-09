@@ -67,7 +67,7 @@ public class UserController {
     return ApiResponse.defaultOk(new AuthenticateResponse(user.getId()));
   }
 
-  @GetMapping("test")
+  @GetMapping("/test")
   public String test() {
     return "굿잡ㅋ";
   }
