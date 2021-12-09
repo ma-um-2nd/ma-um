@@ -3,6 +3,9 @@ CMD ["./gradlew", "clean", "build"]
 
 ARG JAR_FILE=build/libs/*.jar
 
+RUN pwd
+RUN echo ${JAR_FILE}
+
 COPY ${JAR_FILE} auth-server.jar
 
 ENTRYPOINT ["java", "-jar", "auth-server.jar"]
