@@ -1,7 +1,7 @@
 FROM openjdk:8-jdk-alpine
 
-ARG JAR_FILE=build/libs/*.jar
+ARG JAR_FILE=./build/libs/*.jar
 
-COPY ${JAR_FILE} music-server.jar
+COPY ${JAR_FILE} ./
 
-ENTRYPOINT ["java", "-jar", "/music-server.jar"]
+ENTRYPOINT ["java", "-jar", "music-server-0.0.1-SNAPSHOT.jar"]
