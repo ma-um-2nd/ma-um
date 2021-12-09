@@ -1,7 +1,8 @@
 FROM openjdk:8-jdk-alpine
+CMD ["./gradlew", "clean", "build"]
 
 ARG JAR_FILE=build/libs/*.jar
 
 COPY ${JAR_FILE} auth-server.jar
 
-ENTRYPOINT ["java", "-jar", "/auth-server.jar"]
+ENTRYPOINT ["java", "-jar", "auth-server.jar"]
