@@ -31,14 +31,15 @@ import springfox.documentation.annotations.ApiIgnore;
 @CrossOrigin("*")
 @RequiredArgsConstructor
 public class UserController {
-
   private final UserService userService;
 
   @GetMapping("/load-user")
   public ApiResponse<?> validateUserOrRegister(
-      @RequestHeader("Authorization") @AuthenticationParameter @ApiIgnore String token,
-      HttpServletResponse httpServletResponse) {
-
+    @RequestHeader(
+      "Authorization"
+    ) @AuthenticationParameter @ApiIgnore String token,
+    HttpServletResponse httpServletResponse
+  ) {
     String oauthId = token;
     User user;
     try {
@@ -46,16 +47,17 @@ public class UserController {
     } catch (UserNotFoundException ex) {
       user = userService.registerUserByOauthId(oauthId);
       httpServletResponse.setStatus(HttpStatus.CREATED.value());
-      return ApiResponse.of(HttpStatus.CREATED, "success",
-          user.getOauthId());
+      return ApiResponse.of(HttpStatus.CREATED, "success", user.getOauthId());
     }
     return ApiResponse.defaultOk(user.getOauthId());
   }
 
   @GetMapping("")
   public ApiResponse<?> authenticateTokenAndGetUserId(
-      @RequestHeader("Authorization") @AuthenticationParameter @ApiIgnore String token) {
-
+    @RequestHeader(
+      "Authorization"
+    ) @AuthenticationParameter @ApiIgnore String token
+  ) {
     User user;
     try {
       user = userService.findUserByOauthId(token);
@@ -63,5 +65,10 @@ public class UserController {
       throw new UnauthorizedException(token);
     }
     return ApiResponse.defaultOk(new AuthenticateResponse(user.getId()));
+  }
+
+  @GetMapping("test")
+  public String test() {
+    return "굿잡ㅋ";
   }
 }
