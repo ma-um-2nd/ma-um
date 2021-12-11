@@ -15,6 +15,7 @@
 
 
 
+
 FROM python:3.8
 # 컨테이너 내에서 코드가 실행될 경로 설정
 WORKDIR /usr/src/emotion
@@ -39,9 +40,6 @@ RUN pip install git+https://git@github.com/SKTBrain/KoBERT.git@master
 COPY . .
 # 포트 설정
 EXPOSE 8000
-
-
-
 
 CMD ["python", "manage.py", "makemigrations"]
 ENTRYPOINT ["python", "manage.py", "migrate"]
