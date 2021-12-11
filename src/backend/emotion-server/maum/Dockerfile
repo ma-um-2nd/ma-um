@@ -14,6 +14,7 @@
 # CMD ["./manage.py", "runserver", "8000"]
 
 
+
 FROM python:3.8
 # 컨테이너 내에서 코드가 실행될 경로 설정
 WORKDIR /usr/src/emotion
