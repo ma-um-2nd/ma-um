@@ -51,6 +51,7 @@
 # ENTRYPOINT ["python", "manage.py", "migrate"]
 # ENTRYPOINT ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
+
 FROM python:3.8
 # 컨테이너 내에서 코드가 실행될 경로 설정
 WORKDIR /usr/src/emotion
