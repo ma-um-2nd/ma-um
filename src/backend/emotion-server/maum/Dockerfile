@@ -55,7 +55,6 @@ FROM python:3.8
 # 컨테이너 내에서 코드가 실행될 경로 설정
 WORKDIR /usr/src/emotion
 # requirements.txt에 명시된 필요한 packages 설치
-COPY requirements2.txt ./
 RUN pip install --upgrade pip
 RUN pip install Django==3.2.10
 RUN pip install drf-yasg
