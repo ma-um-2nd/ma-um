@@ -76,30 +76,31 @@ WSGI_APPLICATION = 'maum.wsgi.application'
 
 
 
+
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-# DATABASES = {
-
-#     'default': {
-#         #'ENGINE': 'django.db.backends.sqlite3',
-#         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'test_database',  #데이터베이스 이름
-#         'USER': 'root', #root
-#         'PASSWORD': '1234', #1234
-#         'HOST': '3.34.42.249', #공백으로 냅두면 default localhost
-#         'PORT': '33066' #공백으로 냅두면 default 3306
-#         # 'HOST': 'db-adress', #공백으로 냅두면 default localhost
-#         # 'PORT': 'port-number' #공백으로 냅두면 default 3306
-#     }
-# }
 DATABASES = {
+
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        #'ENGINE': 'django.db.backends.sqlite3',
+        #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test_database',  #데이터베이스 이름
+        'USER': 'root', #root
+        'PASSWORD': '1234', #1234
+        'HOST': '3.34.42.249', #공백으로 냅두면 default localhost
+        'PORT': '33066' #공백으로 냅두면 default 3306
+        # 'HOST': 'db-adress', #공백으로 냅두면 default localhost
+        # 'PORT': 'port-number' #공백으로 냅두면 default 3306
     }
 }
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 
