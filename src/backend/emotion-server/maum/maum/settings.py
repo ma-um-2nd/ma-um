@@ -106,7 +106,7 @@ WSGI_APPLICATION = 'maum.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'maum_music',  #데이터베이스 이름
+        'NAME': 'test',  #데이터베이스 이름
         'USER': 'admin', #root
         'PASSWORD': 'maum1230', #1234
         'HOST': 'maum-db.ci57v9qxvd9j.ap-northeast-2.rds.amazonaws.com', #공백으로 냅두면 default localhost
