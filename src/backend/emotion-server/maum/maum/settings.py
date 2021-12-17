@@ -95,13 +95,24 @@ WSGI_APPLICATION = 'maum.wsgi.application'
 #         # 'PORT': 'port-number' #공백으로 냅두면 default 3306
 #     }
 # }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'test',  #데이터베이스 이름
+        'USER': 'admin', #root
+        'PASSWORD': 'maum1230', #1234
+        'HOST': 'maum-db.ci57v9qxvd9j.ap-northeast-2.rds.amazonaws.com', #공백으로 냅두면 default localhost
+        'PORT': '3306' #공백으로 냅두면 default 3306
     }
 }
-
 
 
 

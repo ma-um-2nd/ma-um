@@ -2,7 +2,6 @@ FROM openjdk:8-jdk-alpine
 
 ARG JAR_FILE=./build/libs/*.jar
 
-
 COPY ${JAR_FILE} ./
 
 ENTRYPOINT ["java", "-jar", "diary-server-0.0.1-SNAPSHOT.jar"]
