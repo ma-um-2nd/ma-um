@@ -1,11 +1,11 @@
 spring:
   datasource:
     driver-class-name: org.mariadb.jdbc.Driver
-    url: jdbc:mariadb://3.34.42.249:33066/maum_diary?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Seoul&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true&useSSL=false
+    url: jdbc:mariadb://maum-db.ci57v9qxvd9j.ap-northeast-2.rds.amazonaws.com:3306/maum_diary?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Seoul&zeroDateTimeBehavior=convertToNull&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true&useSSL=false
 
     hikari:
-      username: root
-      password: 1234
+      username: admin
+      password: maum1230
   jpa:
     hibernate:
       naming:
@@ -22,8 +22,8 @@ server:
 
 url:
   auth:
-    base: http://localhost:8091/api/v1/user
+    base: http://13.124.111.82/auth/api/v1/user
   diary:
-    base: http://localhost:8092/api/v1/diary
+    base: http://13.124.111.82/diary/api/v1/diary
   django:
-    base: k207.ssafy.io:8000
+    base: http://13.124.111.82/emotion
