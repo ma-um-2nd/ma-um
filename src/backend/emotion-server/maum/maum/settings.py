@@ -108,6 +108,7 @@ WSGI_APPLICATION = 'maum.wsgi.application'
 
 
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
